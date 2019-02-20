@@ -1,0 +1,12 @@
+<script>
+function sum(a)
+{
+return function sum2(b){
+        return function(c){
+            return a+b+c;
+        }
+}
+}
+var result=sum(3)(7)(8);
+console.log(result);
+</script>

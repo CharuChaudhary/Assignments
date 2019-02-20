@@ -1,0 +1,42 @@
+<script>
+function sum(a)
+        {
+            if(arguments.length==2)
+            return arguments[0]+arguments[1];
+            else
+            return function sum2(b) {
+                return a+b;
+            }
+        }
+        
+var re=sum(2,3);
+var res=sum(2)(3);
+console.log(re+     "sum(2,3)");
+console.log(res+    "sum(2)(3)");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<script>
+var data=[{type:'A',percent:10},
+        {type:'B',percent:20},
+        {type:'C',percent:30},
+        {type:'D',percent:40},
+        {type:'E',percent:50}];
+/*The function calculate is calculating the tax deducted and is returning 5 values Type,
+Total Amount,percentage tax,amount of tax(in rupees),Amount after deduction */
+function calculate(Type,Amount)
+{
+for(let i=0;i<data.length;i++)
+{
+    if(data[i].type==Type)
+    {
+        var percentage=data[i].percent;
+        var amt_deducted=(percentage*Amount)/100;
+        var amt_aftr_deduction=Amount-amt_deducted;
+
+    }
+}
+var result= {"Type" : Type, "Total Amount":Amount,"Percentage of Tax Deduction":percentage,"Amount Deducted":amt_deducted,"Amount after deduction":amt_aftr_deduction};
+return result;
+}
+
+var ans=calculate('C',500);
+console.log(ans);
+</script>
